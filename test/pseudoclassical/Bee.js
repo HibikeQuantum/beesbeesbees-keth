@@ -7,10 +7,11 @@ var verifyClass = require('./verifyClass')
 describe('Bee class functionality', function() {
 
   verifyClass(Bee).followsPattern('pseudoclassical', {}, false);
-
+  var bee;
   beforeEach(function() {
     bee = new Bee();
   });
+
 
   /*  Overwrite methods from superclass  */
 

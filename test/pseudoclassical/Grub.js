@@ -7,7 +7,7 @@ var verifyClass = require('./verifyClass')
 describe('Grub class functionality', function() {
 
   verifyClass(Grub).followsPattern('pseudoclassical', {}, false);
-
+  var grub;
   beforeEach(function() {
     grub = new Grub();
   });

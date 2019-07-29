@@ -7,7 +7,7 @@ var verifyClass = require('./verifyClass')
 describe('HoneyMakerBee class functionality', function() {
 
   verifyClass(HoneyMakerBee).followsPattern('pseudoclassical', {}, false);
-
+  var honeyBee;
   beforeEach(function() {
     honeyBee = new HoneyMakerBee();
   });
@@ -52,10 +52,10 @@ describe('HoneyMakerBee class functionality', function() {
 
   it('should have a `giveHoney` method that subtracts `1` from that honeyBee\'s honeyPot', function() {
     expect(honeyBee.giveHoney).to.be.a('function');
-    honeyBee.makeHoney();
-    honeyBee.makeHoney();
-    honeyBee.makeHoney();
-    honeyBee.giveHoney();
+    honeyBee.makeHoney(); //
+    honeyBee.makeHoney(); //1
+    honeyBee.makeHoney(); //2
+    honeyBee.giveHoney(); //3 - > 2
     expect(honeyBee.honeyPot).to.equal(2);
   });
 
